@@ -1,0 +1,31 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./mvnw clean package
+  - cd easyframe-config-server && docker build -t easyframe/easyframe-config-server .
+  - cd easyframe-dataflow-server && docker build -t easyframe/easyframe-dataflow-server .
+  - cd easyframe-dataflow-shell && docker build -t easyframe/easyframe-dataflow-shell .
+  - cd easyframe-eureka && docker build -t easyframe/easyframe-eureka .
+  - cd easyframe-hystrix-dashboard && docker build -t easyframe/easyframe-hystrix-dashboard .
+  - cd easyframe-hystrix-turbine && docker build -t easyframe/easyframe-hystrix-turbine .
+  - cd easyframe-monitor && docker build -t easyframe/monitor .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push easyframe/easyframe-config-server;
+    docker push easyframe/easyframe-dataflow-server;
+    docker push easyframe/easyframe-dataflow-shell;
+    docker push easyframe/easyframe-eureka;
+    docker push easyframe/easyframe-hystrix-dashboard;
+    docker push easyframe/easyframe-hystrix-turbine;
+    docker push easyframe/easyframe-monitor;
+    fi

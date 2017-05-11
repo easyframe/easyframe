@@ -1,0 +1,34 @@
+server:
+  port: 28020
+info:
+  easyframe:
+    description: EasyFrame-Hystrix-Turbine
+    url: https://github.com/easyframe/easyframe-hystrix-turbine
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-hystrix-turbine
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

@@ -1,0 +1,42 @@
+security:
+  user:
+    name: admin
+    password: easyframe
+  basic:
+    enabled: true
+server:
+  port: 28000
+info:
+  easyframe:
+    description: EasyFrame-Monitor
+    url: https://github.com/easyframe/easyframe-monitor
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-monitor
+  profiles:
+    active: dev
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

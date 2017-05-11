@@ -1,0 +1,40 @@
+= easyframe-monitor
+
+easyframe: Monitor
+
+Travis CI: image:https://travis-ci.org/easyframe/easyframe-monitor.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-monitor]
+
+== Features
+
+* Monitor
+
+== Installation
+
+=== Run with standalone Docker
+
+ docker run -p 28000:28000 easyframe/easyframe-monitor
+
+==  Run With Sources
+
+=== Prerequisites
+
+* Java: 1.8
+
+=== Option 1: Runs with docker
+* Ensure the easyframe network is available
+----
+docker network create easyframe
+----
+* Run the applicaiton with docker-compose
+----
+docker-compose up -d
+----
+
+=== Options 2: Runs with standalone java
+
+----
+mvn spring-boot:run
+----
+
+=== Enjoy
+http://localhost:28000

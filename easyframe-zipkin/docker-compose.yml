@@ -1,0 +1,33 @@
+version: '3'
+services:
+  easyframe-zipkin:
+    image: easyframe/easyframe-zipkin:latest
+    stdin_open: true
+    ports:
+      - 9411:9411/tcp
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      SPRING_CLOUD_CONFIG_ENABLED: ${SPRING_CLOUD_CONFIG_ENABLED}
+      SPRING_CLOUD_CONFIG_URI: ${SPRING_CLOUD_CONFIG_URI}
+      SPRING_JACKSON_SERIALIZATION_INDENT_OUTPUT: "true"
+    networks:
+      - easyframe
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+      resources:
+        limits:
+          cpus: "1"
+          memory: "2048M"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "http://localhost:9411/health", "-O", "/dev/null"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+networks:
+  easyframe:
+    external: true

@@ -1,0 +1,67 @@
+#Enable Security Control
+security:
+  user:
+    name: admin
+    password: easyframe
+  basic:
+    enabled: true
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+spring:
+  application:
+    name: easyframe-config-server
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        enabled: false
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*
+      preferred-networks:
+        - 10.0
+        - 10.1
+        - 192.168
+    config:
+      enabled: false
+      label: master
+      server:
+        bootstrap: true
+        git:
+          cloneOnStart: true
+          force-pull: true
+          uri: https://github.com/easyframe/easyframe-config-repo
+    bus:
+      enabled: false
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod
+  cloud:
+    config:
+      label: master

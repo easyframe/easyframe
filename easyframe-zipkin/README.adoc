@@ -1,0 +1,40 @@
+= easyframe-zipkin
+
+easyframe: Zipkin
+
+Travis CI: image:https://travis-ci.org/easyframe/easyframe-zipkin.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-zipkin]
+
+== Features
+
+* Monitor
+
+== Installation
+
+=== Run with Docker
+
+ docker run -p 9411:9411 easyframe/easyframe-zipkin
+
+==  Run With Sources
+
+=== Prerequisites
+
+* Java: 1.8
+
+=== Option 1: Runs with docker
+* Ensure the easyframe network is available
+----
+docker network create easyframe
+----
+* Run the applicaiton with docker-compose
+----
+docker-compose up -d
+----
+
+=== Options 2: Runs with standalone java
+
+----
+mvn spring-boot:run
+----
+
+=== Enjoy
+http://localhost:9411

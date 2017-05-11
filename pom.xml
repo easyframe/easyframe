@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.easyframe</groupId>
+    <artifactId>easyframe</artifactId>
+    <version>master-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>easyframe-config-server</module>
+        <module>easyframe-dataflow-server</module>
+        <module>easyframe-dataflow-shell</module>
+        <module>easyframe-eureka</module>
+        <module>easyframe-hystrix-dashboard</module>
+        <module>easyframe-hystrix-turbine</module>
+        <module>easyframe-monitor</module>
+        <module>easyframe-zipkin</module>
+    </modules>
+</project>

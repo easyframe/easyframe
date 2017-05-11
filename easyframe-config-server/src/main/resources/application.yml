@@ -1,0 +1,36 @@
+server:
+  port: 8888
+info:
+  easyframe:
+    description: EasyFrame-Config-Server
+    url: https://github.com/easyframe/easyframe-config-server
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-config-server
+  profiles:
+    active: dev
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

@@ -1,0 +1,36 @@
+server:
+  port: 28050
+info:
+  easyframe:
+    description: EasyFrame-Dataflow-Shell
+    url: https://github.com/easyframe/easyframe-dataflow-shell
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-dataflow-shell
+  profiles:
+    active: dev
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

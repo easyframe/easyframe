@@ -1,0 +1,39 @@
+server:
+  port: 9411
+info:
+  easyframe:
+    description: EasyFrame-Zipkin
+    url: https://github.com/easyframe/easyframe-zipkin
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: easyframe-zipkin
+logging:
+  level:
+    debug
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

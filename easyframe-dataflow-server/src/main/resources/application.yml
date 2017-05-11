@@ -1,0 +1,36 @@
+server:
+  port: 28040
+info:
+  easyframe:
+    description: EasyFrame-Dataflow-Server
+    url: https://github.com/easyframe/easyframe-dataflow-server
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-dataflow-server
+  profiles:
+    active: dev
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

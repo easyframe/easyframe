@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: easyframe-dataflow-server
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        enabled: false
+  cloud:
+    config:
+      enabled: false
+      label: develop
+    inetutils:
+      preferred-networks:
+        - 10.0
+        - 10.1
+        - 192.168
+eureka:
+  client:
+    enabled: false
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod
