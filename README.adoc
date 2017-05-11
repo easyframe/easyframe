@@ -2,6 +2,8 @@
 
 EasyFrame Stack
 
+Travis CI: image:https://travis-ci.org/easyframe/easyframe.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe]
+
 == Features
 
 * easyframe-batch-admin: 28030
