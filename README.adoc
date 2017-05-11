@@ -6,14 +6,12 @@ Travis CI: image:https://travis-ci.org/easyframe/easyframe.svg?branch=master[Sta
 
 == Features
 
-* easyframe-config-server: 8888
-* easyframe-dataflow-server: 28040
-* easyframe-dataflow-shell: 28050
-* easyframe-eureka: 8761
-* easyframe-hystrix-dashboard: 28010
-* easyframe-hystrix-turbine: 28020
-* easyframe-monitor: 28000
-* easyframe-zipkin: 9411
+* easyframe-config-server: http://localhost:8888
+* easyframe-eureka: http://localhost:8761
+* easyframe-hystrix-dashboard: http://localhost:28010
+* easyframe-hystrix-turbine: http://localhost:28020
+* easyframe-monitor: http://localhost:28000
+* easyframe-zipkin: http://localhost:9411
 
 == Installation
 
@@ -36,6 +34,3 @@ docker-compose up -d
 ----
 mvn spring-boot:run
 ----
-
-=== Enjoy
-http://localhost:8888

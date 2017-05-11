@@ -16,7 +16,7 @@ script:
   - cd ../easyframe-eureka && docker build -t easyframe/easyframe-eureka .
   - cd ../easyframe-hystrix-dashboard && docker build -t easyframe/easyframe-hystrix-dashboard .
   - cd ../easyframe-hystrix-turbine && docker build -t easyframe/easyframe-hystrix-turbine .
-  - cd ../easyframe-monitor && docker build -t easyframe/monitor .
+  - cd ../easyframe-monitor && docker build -t easyframe/easyframe-monitor .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
