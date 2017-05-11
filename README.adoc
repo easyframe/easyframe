@@ -6,18 +6,14 @@ Travis CI: image:https://travis-ci.org/easyframe/easyframe.svg?branch=master[Sta
 
 == Features
 
-* easyframe-batch-admin: 28030
 * easyframe-config-server: 8888
 * easyframe-dataflow-server: 28040
 * easyframe-dataflow-shell: 28050
-* easyframe-demo: 28080
-* easyframe-dependency: None
 * easyframe-eureka: 8761
 * easyframe-hystrix-dashboard: 28010
 * easyframe-hystrix-turbine: 28020
 * easyframe-monitor: 28000
 * easyframe-zipkin: 9411
-* easyframe-zuul: 28880
 
 == Installation
 
