@@ -16,5 +16,6 @@
         <module>easyframe-hystrix-turbine</module>
         <module>easyframe-monitor</module>
         <module>easyframe-zipkin</module>
+        <module>easyframe-zuul</module>
     </modules>
 </project>
