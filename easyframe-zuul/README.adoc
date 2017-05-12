@@ -1,0 +1,41 @@
+= easyframe-zuul
+
+easyframe: Zuul
+
+Travis CI: image:https://travis-ci.org/easyframe/easyframe-zuul.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-zuul]
+
+
+== Features
+
+* Monitor
+
+== Installation
+
+=== Run with standalone Docker
+
+ docker run -p 28880:28880 easyframe/easyframe-zuul
+
+==  Run With Sources
+
+=== Prerequisites
+
+* Java: 1.8
+
+=== Option 1: Runs with docker
+* Ensure the easyframe network is available
+----
+docker network create easyframe
+----
+* Run the applicaiton with docker-compose
+----
+docker-compose up -d
+----
+
+=== Options 2: Runs with standalone java
+
+----
+mvn spring-boot:run
+----
+
+=== Enjoy
+http://localhost:28880

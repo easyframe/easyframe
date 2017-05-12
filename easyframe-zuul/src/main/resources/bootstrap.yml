@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        enabled: false
+  cloud:
+    config:
+      enabled: false
+      label: develop
+    inetutils:
+      preferred-networks:
+        - 10.0
+        - 10.1
+        - 192.168
+ribbon:
+  eureka:
+    enabled: true
+eureka:
+  client:
+    enabled: false
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+eureka:
+  instance:
+    prefer-ip-address: true
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod

@@ -17,6 +17,8 @@ script:
   - cd ../easyframe-hystrix-dashboard && docker build -t easyframe/easyframe-hystrix-dashboard .
   - cd ../easyframe-hystrix-turbine && docker build -t easyframe/easyframe-hystrix-turbine .
   - cd ../easyframe-monitor && docker build -t easyframe/easyframe-monitor .
+  - cd ../easyframe-zipkin && docker build -t easyframe/easyframe-zipkin .
+  - cd ../easyframe-zuul && docker build -t easyframe/easyframe-zuul .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
@@ -28,4 +30,6 @@ after_success:
     docker push easyframe/easyframe-hystrix-dashboard;
     docker push easyframe/easyframe-hystrix-turbine;
     docker push easyframe/easyframe-monitor;
+    docker push easyframe/easyframe-zipkin;
+    docker push easyframe/easyframe-zuul;
     fi

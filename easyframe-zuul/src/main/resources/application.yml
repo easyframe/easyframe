@@ -1,0 +1,35 @@
+server:
+  port: 28880
+info:
+  easyframe:
+    description: EasyFrame-Zuul
+    url: https://github.com/easyframe/easyframe-zuul
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+spring:
+  application:
+    name: easyframe-zuul
+  profiles:
+    active: dev
+
+# [dev] Environment
+---
+spring:
+  profiles: dev
+
+# [test] Environment
+---
+spring:
+  profiles: test
+
+# [staging] Environment
+---
+spring:
+  profiles: staging
+
+# [prod] Environment
+---
+spring:
+  profiles: prod
