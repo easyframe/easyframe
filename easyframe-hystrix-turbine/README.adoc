@@ -2,8 +2,6 @@
 
 easyframe: Hystrix Turbine
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-hystrix-turbine.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-hystrix-turbine]
-
 == Features
 
 * Hystrix Turbine

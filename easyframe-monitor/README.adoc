@@ -2,8 +2,6 @@
 
 easyframe: Monitor
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-monitor.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-monitor]
-
 == Features
 
 * Monitor

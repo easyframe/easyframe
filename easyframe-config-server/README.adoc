@@ -2,8 +2,6 @@
 
 easyframe: Config Server
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-config-server.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-config-server]
-
 == Features
 
 * Config Server

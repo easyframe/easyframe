@@ -2,8 +2,6 @@
 
 easyframe: Data Flow Shell
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-dataflow-shell.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-dataflow-shell]
-
 == Features
 
 * Data Flow Shell

@@ -2,8 +2,6 @@
 
 easyframe: Zipkin
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-zipkin.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-zipkin]
-
 == Features
 
 * Monitor

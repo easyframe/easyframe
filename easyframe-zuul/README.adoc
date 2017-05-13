@@ -2,9 +2,6 @@
 
 easyframe: Zuul
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-zuul.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-zuul]
-
-
 == Features
 
 * Monitor

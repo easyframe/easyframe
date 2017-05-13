@@ -2,8 +2,6 @@
 
 easyframe: Hystrix Dashboard
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-hystrix-dashboard.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-hystrix-dashboard]
-
 == Features
 
 * Hystrix Dashboard

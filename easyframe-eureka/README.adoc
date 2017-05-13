@@ -2,8 +2,6 @@
 
 easyframe: Eureka
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-eureka.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-eureka]
-
 == Features
 
 * eureka
