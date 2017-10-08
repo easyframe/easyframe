@@ -10,26 +10,26 @@ jdk:
 
 script:
   - ./mvnw clean package
-  - cd easyframe-config-server && docker build -t easyframe/easyframe-config-server .
-  - cd ../easyframe-dataflow-server && docker build -t easyframe/easyframe-dataflow-server .
-  - cd ../easyframe-dataflow-shell && docker build -t easyframe/easyframe-dataflow-shell .
-  - cd ../easyframe-eureka && docker build -t easyframe/easyframe-eureka .
-  - cd ../easyframe-hystrix-dashboard && docker build -t easyframe/easyframe-hystrix-dashboard .
-  - cd ../easyframe-hystrix-turbine && docker build -t easyframe/easyframe-hystrix-turbine .
-  - cd ../easyframe-monitor && docker build -t easyframe/easyframe-monitor .
-  - cd ../easyframe-zipkin && docker build -t easyframe/easyframe-zipkin .
-  - cd ../easyframe-zuul && docker build -t easyframe/easyframe-zuul .
+  - cd easyframe-config-server && docker build -t easyframe/easyframe-config-server:$DOCKER_TAG .
+  - cd ../easyframe-dataflow-server && docker build -t easyframe/easyframe-dataflow-server:$DOCKER_TAG .
+  - cd ../easyframe-dataflow-shell && docker build -t easyframe/easyframe-dataflow-shell:$DOCKER_TAG .
+  - cd ../easyframe-eureka && docker build -t easyframe/easyframe-eureka:$DOCKER_TAG .
+  - cd ../easyframe-hystrix-dashboard && docker build -t easyframe/easyframe-hystrix-dashboard:$DOCKER_TAG .
+  - cd ../easyframe-hystrix-turbine && docker build -t easyframe/easyframe-hystrix-turbine:$DOCKER_TAG .
+  - cd ../easyframe-monitor && docker build -t easyframe/easyframe-monitor:$DOCKER_TAG .
+  - cd ../easyframe-zipkin && docker build -t easyframe/easyframe-zipkin:$DOCKER_TAG .
+  - cd ../easyframe-zuul && docker build -t easyframe/easyframe-zuul:$DOCKER_TAG .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push easyframe/easyframe-config-server;
-    docker push easyframe/easyframe-dataflow-server;
-    docker push easyframe/easyframe-dataflow-shell;
-    docker push easyframe/easyframe-eureka;
-    docker push easyframe/easyframe-hystrix-dashboard;
-    docker push easyframe/easyframe-hystrix-turbine;
-    docker push easyframe/easyframe-monitor;
-    docker push easyframe/easyframe-zipkin;
-    docker push easyframe/easyframe-zuul;
+    docker push easyframe/easyframe-config-server:$DOCKER_TAG;
+    docker push easyframe/easyframe-dataflow-server:$DOCKER_TAG;
+    docker push easyframe/easyframe-dataflow-shell:$DOCKER_TAG;
+    docker push easyframe/easyframe-eureka:$DOCKER_TAG;
+    docker push easyframe/easyframe-hystrix-dashboard:$DOCKER_TAG;
+    docker push easyframe/easyframe-hystrix-turbine:$DOCKER_TAG;
+    docker push easyframe/easyframe-monitor:$DOCKER_TAG;
+    docker push easyframe/easyframe-zipkin:$DOCKER_TAG;
+    docker push easyframe/easyframe-zuul:$DOCKER_TAG;
     fi
