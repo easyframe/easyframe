@@ -36,3 +36,9 @@ mvn spring-boot:run
 
 === Enjoy
 http://localhost:8888
+
+== Usage
+=== Fetach config of app `easyframe-demo`, profie is dev
+```
+  curl http://admin:easyframe@localhost:8888/dev/easyframe-demo
+```
