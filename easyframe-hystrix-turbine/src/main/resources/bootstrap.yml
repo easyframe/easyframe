@@ -36,6 +36,19 @@ spring:
 ---
 spring:
   profiles: test
+  boot:
+    admin:
+      client:
+        enabled: true
+  cloud:
+    config:
+      enabled: true
+      uri: http://admin:easyframe@localhost:8888
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 # [staging] Environment
 ---

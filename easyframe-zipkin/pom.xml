@@ -44,7 +44,7 @@
     </parent>
 
     <properties>
-        <zipkin-storage-mysql.vesion>1.23.0</zipkin-storage-mysql.vesion>
+        <zipkin-storage-mysql.vesion>1.28.0</zipkin-storage-mysql.vesion>
     </properties>
 
     <dependencies>
