@@ -45,8 +45,8 @@
         <project.build.locale>zh_CN</project.build.locale>
 
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-        <easyframe.version>1.0.2</easyframe.version>
-        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+        <easyframe.version>1.1.1</easyframe.version>
+        <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
         <maven-surefire-report-plugin.version>2.20</maven-surefire-report-plugin.version>
         <git-commit-id-plugin.version>2.2.2</git-commit-id-plugin.version>
         <springloaded.version>1.2.7.RELEASE</springloaded.version>
